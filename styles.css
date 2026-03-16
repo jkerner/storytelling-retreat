@@ -1,0 +1,543 @@
+/* ========================================
+   Storytelling Retreat — Styles
+   ======================================== */
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-cream: #FAF7F2;
+  --color-warm-white: #FFFDF9;
+  --color-charcoal: #2C2C2C;
+  --color-text: #3A3A3A;
+  --color-text-light: #6B6B6B;
+  --color-accent: #B8860B;
+  --color-accent-hover: #9A7209;
+  --color-border: #E8E2D8;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-cream);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container-narrow {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+/* ========================================
+   Navigation
+   ======================================== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(250, 247, 242, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.nav-logo {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-charcoal);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--color-charcoal);
+}
+
+.nav-cta {
+  background: var(--color-charcoal);
+  color: var(--color-cream) !important;
+  padding: 0.55rem 1.4rem;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease !important;
+}
+
+.nav-cta:hover {
+  background: var(--color-accent) !important;
+  color: #fff !important;
+}
+
+/* Mobile Nav Toggle */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-charcoal);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ========================================
+   Hero — Home Page
+   ======================================== */
+.hero {
+  padding-top: 72px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--color-warm-white);
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 700;
+  color: var(--color-charcoal);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.2rem;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 300;
+  color: var(--color-text-light);
+  margin-bottom: 2.5rem;
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+/* ========================================
+   About Hero
+   ======================================== */
+.about-hero {
+  padding-top: 72px;
+  padding-bottom: 0;
+  background: var(--color-warm-white);
+}
+
+.about-hero .container {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 600;
+  color: var(--color-charcoal);
+  letter-spacing: -0.01em;
+}
+
+/* ========================================
+   Pull Quote / Workshop Intro
+   ======================================== */
+.workshop-intro {
+  background: var(--color-warm-white);
+  border-top: 1px solid var(--color-border);
+}
+
+.pull-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text);
+  text-align: center;
+  line-height: 1.6;
+  border: none;
+  padding: 0;
+}
+
+/* ========================================
+   Facilitators Preview (Home)
+   ======================================== */
+.facilitators-preview {
+  background: var(--color-cream);
+}
+
+.preview-text {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* ========================================
+   Facilitators (About Page)
+   ======================================== */
+.facilitators {
+  background: var(--color-cream);
+}
+
+.facilitator {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+  margin-bottom: 5rem;
+}
+
+.facilitator:last-child {
+  margin-bottom: 0;
+}
+
+.facilitator-reverse {
+  grid-template-columns: 1fr 300px;
+}
+
+.facilitator-reverse .facilitator-image {
+  order: 2;
+}
+
+.facilitator-reverse .facilitator-info {
+  order: 1;
+}
+
+.facilitator-image {
+  position: sticky;
+  top: 100px;
+}
+
+.facilitator-placeholder {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: var(--color-border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.facilitator-name {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-charcoal);
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.facilitator-role {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.02em;
+}
+
+.facilitator-bio {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 1.2rem;
+}
+
+.facilitator-bio:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   Philosophy / Approach
+   ======================================== */
+.philosophy {
+  background: var(--color-warm-white);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.philosophy-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--color-text);
+  text-align: center;
+}
+
+/* ========================================
+   Section Titles
+   ======================================== */
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 600;
+  color: var(--color-charcoal);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* ========================================
+   CTA Section
+   ======================================== */
+.cta-section {
+  background: var(--color-charcoal);
+}
+
+.cta-section .section-title {
+  color: var(--color-cream);
+}
+
+/* ========================================
+   Buttons
+   ======================================== */
+.btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  padding: 0.85rem 2.2rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-charcoal);
+  border: 1.5px solid var(--color-charcoal);
+}
+
+.btn-outline:hover {
+  background: var(--color-charcoal);
+  color: var(--color-cream);
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+.footer {
+  background: var(--color-charcoal);
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-cream);
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: rgba(250, 247, 242, 0.5);
+}
+
+/* ========================================
+   Modal
+   ======================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(44, 44, 44, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background: var(--color-warm-white);
+  padding: 3rem;
+  border-radius: 16px;
+  max-width: 480px;
+  width: 90%;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal {
+  transform: translateY(0);
+}
+
+.modal h2 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-charcoal);
+  margin-bottom: 0.8rem;
+}
+
+.modal p {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--color-text-light);
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: var(--color-charcoal);
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: rgba(250, 247, 242, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
+  .facilitator,
+  .facilitator-reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .facilitator-reverse .facilitator-image {
+    order: 0;
+  }
+
+  .facilitator-reverse .facilitator-info {
+    order: 0;
+  }
+
+  .facilitator-image {
+    position: static;
+    max-width: 240px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
