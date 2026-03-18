@@ -629,6 +629,95 @@ a {
 }
 
 /* ==============================
+   WHY SECTION
+   ============================== */
+.why {
+  background: transparent;
+  text-align: center;
+}
+
+.why-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2vw, 20px);
+  line-height: 1.9;
+  color: var(--color-text);
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+}
+
+.why-text:last-child {
+  margin-bottom: 0;
+}
+
+/* ==============================
+   FACILITATORS PREVIEW
+   ============================== */
+.facilitators-preview {
+  background: transparent;
+}
+
+.facilitators-preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.facilitator-preview {
+  text-align: center;
+}
+
+.facilitator-preview-image {
+  width: 220px;
+  height: 280px;
+  margin: 0 auto 1.5rem;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition: border-color 0.5s ease;
+}
+
+.facilitator-preview:hover .facilitator-preview-image {
+  border-color: var(--color-accent);
+}
+
+.facilitator-preview-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.facilitator-preview-name {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-white);
+  margin-bottom: 0.3rem;
+}
+
+.facilitator-preview-role {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 1.2rem;
+}
+
+.facilitator-preview-bio {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .facilitators-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* ==============================
    BRING SECTION
    ============================== */
 .bring {
